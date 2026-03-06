@@ -62,6 +62,8 @@ const translations = {
       service_web_title: 'Professional web design',
       service_web_body:
         'Brendga mos, ishonch uyg‘otadigan va premium taassurot beradigan zamonaviy veb interfeyslar. Kuchli tipografiya, aniq vizual ierarxiya va conversion’ga xizmat qiladigan UX qarorlari bilan ishlab chiqiladi.',
+      service_web_preview_title: 'Tanlangan web ishlar',
+      service_web_preview_cta: 'Live site ochish',
       footer_cta: 'Xabar yuborish →',
     },
     about: {
@@ -150,6 +152,8 @@ const translations = {
       service_web_title: 'Professional Web Design',
       service_web_body:
         'Modern web interfaces built to feel premium, trustworthy, and aligned with the brand. Designed with strong typography, clear visual hierarchy, and UX decisions that support real conversion.',
+      service_web_preview_title: 'Selected web work',
+      service_web_preview_cta: 'Open live site',
       footer_cta: 'Send a Message →',
     },
     about: {
@@ -238,6 +242,8 @@ const translations = {
       service_web_title: 'Профессиональный веб-дизайн',
       service_web_body:
         'Современные веб-интерфейсы, которые выглядят премиально, внушают доверие и точно соответствуют бренду. Сильная типографика, ясная визуальная иерархия и UX-решения, работающие на реальную конверсию.',
+      service_web_preview_title: 'Избранные веб-работы',
+      service_web_preview_cta: 'Открыть live site',
       footer_cta: 'Отправить сообщение →',
     },
     about: {

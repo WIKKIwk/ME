@@ -45,6 +45,28 @@ initializePageI18n('services', (lang) => {
 });
 
 setTimeout(() => {
+    const previewItem = document.getElementById('web-design-item');
+    if (!previewItem) return;
+
+    const togglePreview = () => {
+        const next = !previewItem.classList.contains('is-open');
+        previewItem.classList.toggle('is-open', next);
+        previewItem.setAttribute('aria-expanded', next ? 'true' : 'false');
+    };
+
+    previewItem.addEventListener('click', (event) => {
+        if (event.target.closest('.service-preview-card')) return;
+        togglePreview();
+    });
+
+    previewItem.addEventListener('keydown', (event) => {
+        if (event.key !== 'Enter' && event.key !== ' ') return;
+        event.preventDefault();
+        togglePreview();
+    });
+}, 80);
+
+setTimeout(() => {
     const items = Array.from(document.querySelectorAll('.page-services-list .service-item'));
     if (!items.length) return;
 

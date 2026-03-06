@@ -37,6 +37,10 @@
   border-top: none;
 }
 
+.page-services-list .service-item.service-item-preview {
+  cursor: pointer;
+}
+
 .page-services-list .service-item:last-child {
   border-bottom: none;
   padding-bottom: 4rem;
@@ -60,6 +64,96 @@
 
 .page-services-list .service-item.is-line-visible::before {
   transform: scaleX(1);
+}
+
+.service-preview-block {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-0.5rem);
+  transition:
+    max-height 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.4s ease,
+    transform 0.4s ease,
+    margin-top 0.4s ease;
+  margin-top: 0;
+}
+
+.service-item-preview.is-open .service-preview-block {
+  max-height: 960px;
+  opacity: 1;
+  transform: translateY(0);
+  margin-top: 1.75rem;
+}
+
+.service-preview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 1rem 3.3rem;
+}
+
+.service-preview-title {
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.service-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  padding-left: 3.3rem;
+}
+
+.service-preview-card {
+  display: block;
+  text-decoration: none;
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 22px;
+  overflow: hidden;
+  transition:
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.service-preview-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(167, 139, 250, 0.4);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.service-preview-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  background: #0d0d10;
+}
+
+.service-preview-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.1rem 1.1rem;
+}
+
+.service-preview-name {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.service-preview-link {
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #a78bfa;
 }
 
 .page-footer {
@@ -105,5 +199,14 @@
 
   .contact-page-grid {
     grid-template-columns: 1fr;
+  }
+
+  .service-preview-grid {
+    grid-template-columns: 1fr;
+    padding-left: 0;
+  }
+
+  .service-preview-header {
+    margin-left: 0;
   }
 }
