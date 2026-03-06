@@ -42,8 +42,7 @@
   padding-bottom: 4rem;
 }
 
-.page-services-list .service-item::before,
-.page-services-list .service-item:last-child::after {
+.page-services-list .service-item::before {
   content: '';
   position: absolute;
   left: 0;
@@ -59,12 +58,7 @@
   top: 0;
 }
 
-.page-services-list .service-item:last-child::after {
-  bottom: 0;
-}
-
-.page-services-list .service-item.is-line-visible::before,
-.page-services-list .service-item.is-line-visible:last-child::after {
+.page-services-list .service-item.is-line-visible::before {
   transform: scaleX(1);
 }
 
