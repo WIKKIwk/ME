@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About</title>
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css" />
+  <link rel="stylesheet" href="/src/pages.css" />
+</head>
+
+<body class="page-body">
+  <div id="lang-switcher-root"></div>
+  <div id="staggered-menu-root"></div>
+
+  <main class="page-shell">
+    <section class="page-hero">
+      <span class="badge" data-i18n="badge">About</span>
+      <h1 class="section-big-title" data-i18n="title">About Me</h1>
+      <p class="page-lead" data-i18n="lead">Systems-focused development for real-world operations.</p>
+    </section>
+
+    <section class="about-section page-section">
+      <div class="divider-crosses">
+        <span>+</span><span>+</span><span>+</span><span>+</span><span>+</span><span>+</span>
+      </div>
+      <div class="about-content">
+        <div class="about-text">
+          <p data-i18n="about_p1">I am a systems-focused developer specializing in building real-world, production-grade software. My work goes beyond simple web interfaces — I design and engineer scalable architectures that power business operations from the core.</p>
+          <p data-i18n="about_p2">Over the years, I have worked extensively with ERPNext, building custom modules, manufacturing flows, warehouse automation systems, and complex integrations tailored to real operational needs. I focus on clean architecture, maintainability, and long-term scalability rather than quick, temporary solutions.</p>
+          <p data-i18n="about_p3">I also develop high-performance Linux-based TUI applications designed for speed, reliability, and hardware-level integration. These systems interact with RFID devices, printers, APIs, and backend services, forming tightly integrated, efficient operational platforms.</p>
+          <p data-i18n="about_p4">In addition, I build Telegram automation systems that streamline business workflows, notifications, monitoring, and remote control capabilities. I believe automation should reduce complexity, not add to it.</p>
+          <p data-i18n="about_p5">My approach is rooted in systems thinking — performance first, scalability by design, and automation wherever possible. From backend engineering to deployment and infrastructure, I build solutions that are engineered for impact and built to scale.</p>
+        </div>
+
+        <div class="about-stats">
+          <div class="stat-item">
+            <span class="stat-number"><span id="about-stat-1">3</span><span class="stat-counter-suffix">+</span></span>
+            <span class="stat-label" data-i18n="stat_years">Years Experience</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number"><span id="about-stat-2">20</span><span class="stat-counter-suffix">+</span></span>
+            <span class="stat-label" data-i18n="stat_projects">Projects Completed</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number"><span id="about-stat-3">10</span><span class="stat-counter-suffix">+</span></span>
+            <span class="stat-label" data-i18n="stat_clients">Happy Clients</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer page-footer">
+    <div class="divider-crosses">
+      <span>+</span><span>+</span><span>+</span><span>+</span><span>+</span><span>+</span>
+    </div>
+    <div class="footer-content">
+      <a href="./projects.html" class="btn-secondary" data-i18n="footer_cta">Next: Projects →</a>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/about-page.jsx"></script>
+</body>
+
+</html>

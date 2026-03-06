@@ -9,6 +9,7 @@ export default function CountUp({
   duration = 2,
   className = '',
   startWhen = true,
+  bypassInView = false,
   separator = '',
   padZero = false,
   onStart,
@@ -68,7 +69,7 @@ export default function CountUp({
   }, [from, to, direction, formatValue]);
 
   useEffect(() => {
-    if (isInView && startWhen) {
+    if ((bypassInView || isInView) && startWhen) {
       if (typeof onStart === 'function') onStart();
 
       const timeoutId = setTimeout(() => {
@@ -87,7 +88,7 @@ export default function CountUp({
         clearTimeout(durationTimeoutId);
       };
     }
-  }, [isInView, startWhen, motionValue, direction, from, to, delay, onStart, onEnd, duration]);
+  }, [bypassInView, isInView, startWhen, motionValue, direction, from, to, delay, onStart, onEnd, duration]);
 
   useEffect(() => {
     const unsubscribe = springValue.on('change', latest => {
@@ -101,4 +102,3 @@ export default function CountUp({
 
   return <span className={className} ref={ref}>{formatValue(direction === 'down' ? to : from)}</span>;
 }
-

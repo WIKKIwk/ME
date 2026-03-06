@@ -23,7 +23,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding: 2em 4em 2em 2em;
   background: transparent;
   pointer-events: none;
@@ -34,18 +34,6 @@
   pointer-events: auto;
 }
 
-.sm-logo {
-  display: flex;
-  align-items: center;
-  user-select: none;
-}
-
-.sm-logo-img {
-  display: block;
-  height: 32px;
-  width: auto;
-  object-fit: contain;
-}
 
 .sm-toggle {
   position: relative;
@@ -86,6 +74,9 @@
   display: flex;
   flex-direction: column;
   line-height: 1;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: transform;
 }
 
 .sm-toggle-line {
@@ -103,6 +94,8 @@
   align-items: center;
   justify-content: center;
   will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .sm-panel-itemWrap {
@@ -142,6 +135,10 @@
   overflow-y: auto;
   z-index: 10;
   pointer-events: auto;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: transform;
+  contain: layout paint;
 }
 
 [data-position='left'] .staggered-menu-panel {
@@ -171,6 +168,8 @@
   height: 100%;
   width: 100%;
   transform: translateX(0);
+  backface-visibility: hidden;
+  will-change: transform;
 }
 
 .sm-panel-inner {
@@ -239,6 +238,8 @@
   position: relative;
   padding: 2px 0;
   display: inline-block;
+  backface-visibility: hidden;
+  will-change: transform, opacity;
   transition:
     color 0.3s ease,
     opacity 0.3s ease;
@@ -304,6 +305,8 @@
   display: inline-block;
   will-change: transform;
   transform-origin: 50% 100%;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .sm-panel-item:hover {

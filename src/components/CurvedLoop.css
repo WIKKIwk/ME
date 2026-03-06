@@ -1,21 +1,27 @@
 .curved-loop-jacket {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
   width: 100%;
   padding: 0;
   overflow: hidden;
   margin-top: -12rem;
+  min-height: 7rem;
   -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
   mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
 }
 
-.curved-loop-svg {
+.curved-loop-track {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  will-change: transform;
+  padding: 1rem 0;
+}
+
+.curved-loop-copy,
+.curved-loop-measure {
   user-select: none;
-  width: 100%;
-  aspect-ratio: 100 / 8;
-  overflow: visible;
-  display: block;
   font-size: 3rem;
   fill: #ffffff;
   user-select: none;
@@ -24,4 +30,49 @@
   font-weight: 700;
   text-transform: uppercase;
   line-height: 1;
+}
+
+.curved-loop-copy {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  animation: curved-loop-wave 5.8s ease-in-out infinite;
+  will-change: transform;
+}
+
+.curved-loop-copy:nth-child(2n) {
+  animation-delay: -1.45s;
+}
+
+.curved-loop-copy:nth-child(3n) {
+  animation-delay: -2.9s;
+}
+
+.curved-loop-measure {
+  position: absolute;
+  visibility: hidden;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+@keyframes curved-loop-wave {
+  0% {
+    transform: translateY(10px) scaleY(0.98);
+  }
+
+  25% {
+    transform: translateY(-8px) scaleY(1.02);
+  }
+
+  50% {
+    transform: translateY(12px) scaleY(0.97);
+  }
+
+  75% {
+    transform: translateY(-10px) scaleY(1.03);
+  }
+
+  100% {
+    transform: translateY(10px) scaleY(0.98);
+  }
 }

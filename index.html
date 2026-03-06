@@ -14,6 +14,7 @@
   <!-- Background Elements -->
   <div id="veil-root" class="veil-background"></div>
 
+  <div id="lang-switcher-root"></div>
 
 
   <!-- Staggered Menu -->
@@ -22,27 +23,33 @@
   <main>
     <section id="hero" class="hero-section">
       <div class="hero-text">
-        <div class="hero-line line-1">From Idea to</div>
-        <div class="hero-line line-2">Scalable</div>
-        <div class="hero-line line-3">Architecture.</div>
+        <div class="hero-line line-1" data-i18n="hero_line_1">From Idea to</div>
+        <div class="hero-line line-2" data-i18n="hero_line_2">Scalable</div>
+        <div class="hero-line line-3" data-i18n="hero_line_3">Architecture.</div>
       </div>
-      <p class="hero-subtitle line-4">Clean code. Smart systems. Real impact.</p>
+      <p class="hero-subtitle line-4" data-i18n="hero_subtitle">Clean code. Smart systems. Real impact.</p>
+      <div class="hero-note-block">
+        <div class="divider-crosses reveal-divider">
+          <span>+</span><span>+</span><span>+</span><span>+</span><span>+</span><span>+</span>
+        </div>
+        <div id="hero-note-root" class="hero-note"></div>
+      </div>
     </section>
-
-    <!-- Curved Loop Marquee -->
-    <div id="curved-root"></div>
 
     <!-- What I Build -->
     <section class="what-i-build">
+      <div class="divider-crosses reveal-divider">
+        <span>+</span><span>+</span><span>+</span><span>+</span><span>+</span><span>+</span>
+      </div>
       <div id="blur-root"></div>
 
       <div class="services-list">
         <div class="service-item">
           <div class="service-row">
             <span id="service-num-1" class="service-num">01</span>
-            <h3>Enterprise ERP Solutions</h3>
+            <h3 data-i18n="service_1_title">Enterprise ERP Solutions</h3>
           </div>
-          <p>End-to-end ERPNext implementations — from custom manufacturing workflows and warehouse automation to
+          <p data-i18n="service_1_body">End-to-end ERPNext implementations — from custom manufacturing workflows and warehouse automation to
             multi-branch inventory control and third-party API integrations. Systems built to handle real operational
             complexity at scale.</p>
         </div>
@@ -50,28 +57,28 @@
         <div class="service-item">
           <div class="service-row">
             <span id="service-num-2" class="service-num">02</span>
-            <h3>High-Performance TUI Applications</h3>
-            <span class="service-tag">Rare Skill</span>
+            <h3 data-i18n="service_2_title">High-Performance TUI Applications</h3>
+            <span class="service-tag" data-i18n="rare_skill">Rare Skill</span>
           </div>
-          <p>Full-featured terminal user interfaces for Linux environments — designed for maximum speed, zero-dependency
+          <p data-i18n="service_2_body">Full-featured terminal user interfaces for Linux environments — designed for maximum speed, zero-dependency
             operation, and direct hardware communication. When GUIs are too slow, TUIs deliver.</p>
         </div>
 
         <div class="service-item">
           <div class="service-row">
             <span id="service-num-3" class="service-num">03</span>
-            <h3>Telegram Automation Systems</h3>
+            <h3 data-i18n="service_3_title">Telegram Automation Systems</h3>
           </div>
-          <p>Production-grade Telegram bots that power business workflows — automated notifications, sales pipeline
+          <p data-i18n="service_3_body">Production-grade Telegram bots that power business workflows — automated notifications, sales pipeline
             tracking, inventory alerts, remote device management, and real-time reporting dashboards.</p>
         </div>
 
         <div class="service-item">
           <div class="service-row">
             <span id="service-num-4" class="service-num">04</span>
-            <h3>Hardware & System Integrations</h3>
+            <h3 data-i18n="service_4_title">Hardware & System Integrations</h3>
           </div>
-          <p>Bridging the gap between software and hardware — RFID readers, thermal printers, barcode scanners, and
+          <p data-i18n="service_4_body">Bridging the gap between software and hardware — RFID readers, thermal printers, barcode scanners, and
             custom APIs wired into robust backend systems that work reliably in production environments.</p>
         </div>
       </div>
@@ -80,9 +87,9 @@
     <!-- Scroll Hint -->
     <section class="scroll-hint">
       <div class="scroll-hint-inner">
-        <span class="scroll-label">KEEP SCROLLING<br>TO LEARN MORE</span>
+        <span class="scroll-label"><span data-i18n="scroll_line_1">KEEP SCROLLING</span><br><span data-i18n="scroll_line_2">TO LEARN MORE</span></span>
       </div>
-      <div class="divider-crosses">
+      <div class="divider-crosses reveal-divider">
         <span>+</span><span>+</span><span>+</span><span>+</span><span>+</span><span>+</span>
       </div>
     </section>
@@ -91,9 +98,9 @@
     <section id="about" class="about-section">
       <div class="about-header">
         <div id="about-title-root"></div>
-        <a href="#projects" class="next-link">NEXT PAGE <span class="next-arrow">────────→</span></a>
+        <a href="./projects.html" class="next-link"><span data-i18n="about_next">NEXT PAGE</span> <span class="next-arrow">────────→</span></a>
       </div>
-      <div class="divider-crosses">
+      <div class="divider-crosses reveal-divider">
         <span>+</span><span>+</span><span>+</span><span>+</span><span>+</span><span>+</span>
       </div>
       <div class="about-content">
@@ -101,49 +108,16 @@
         </div>
         <div class="about-stats">
           <div class="stat-item">
-            <span class="stat-number"><span id="stat-num-1">3</span>+</span>
-            <span class="stat-label">Years Experience</span>
+            <span class="stat-number"><span id="stat-num-1">2</span><span class="stat-counter-suffix">+</span></span>
+            <span class="stat-label" data-i18n="stat_years">Years Experience</span>
           </div>
           <div class="stat-item">
-            <span class="stat-number"><span id="stat-num-2">20</span>+</span>
-            <span class="stat-label">Projects Completed</span>
+            <span class="stat-number"><span id="stat-num-2">20</span><span class="stat-counter-suffix">+</span></span>
+            <span class="stat-label" data-i18n="stat_projects">Projects Completed</span>
           </div>
           <div class="stat-item">
-            <span class="stat-number"><span id="stat-num-3">10</span>+</span>
-            <span class="stat-label">Happy Clients</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
-      <div class="about-header">
-        <div id="projects-title-root"></div>
-      </div>
-      <div class="divider-crosses">
-        <span>+</span><span>+</span><span>+</span><span>+</span><span>+</span><span>+</span>
-      </div>
-      <div class="projects-grid">
-        <div class="project-card">
-          <div class="card-img placeholder-img"><span id="project-num-1"></span>01</span></div>
-          <div class="card-content">
-            <h3>Corporate Website</h3>
-            <p>Clean design with smooth animations for a business client.</p>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="card-img placeholder-img"><span id="project-num-2">02</span></div>
-          <div class="card-content">
-            <h3>Portfolio Template</h3>
-            <p>Modern personal page for creatives and developers.</p>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="card-img placeholder-img"><span id="project-num-3">03</span></div>
-          <div class="card-content">
-            <h3>E-Commerce Platform</h3>
-            <p>Smooth UI with high-quality shopping experience.</p>
+            <span class="stat-number"><span id="stat-num-3">10</span><span class="stat-counter-suffix">+</span></span>
+            <span class="stat-label" data-i18n="stat_clients">Happy Clients</span>
           </div>
         </div>
       </div>
@@ -152,13 +126,13 @@
 
   <!-- Footer -->
   <footer id="contact" class="footer">
-    <div class="divider-crosses">
+    <div class="divider-crosses reveal-divider">
       <span>+</span><span>+</span><span>+</span><span>+</span><span>+</span><span>+</span>
     </div>
     <div class="footer-content">
-      <h2 class="section-big-title">LET'S TALK</h2>
-      <p>Got a project in mind? Let's make something great together.</p>
-      <a href="mailto:salom@example.com" class="btn-secondary">Send a Message →</a>
+      <h2 class="section-big-title" data-i18n="footer_title">LET'S TALK</h2>
+      <p data-i18n="footer_body">Got a project in mind? Let's make something great together.</p>
+      <a href="mailto:salom@example.com" class="btn-secondary" data-i18n="footer_cta">Send a Message →</a>
     </div>
     <p class="copyright">Built with minimalism © 2026</p>
   </footer>
