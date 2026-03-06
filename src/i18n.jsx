@@ -59,6 +59,9 @@ const translations = {
       badge: 'Xizmatlar',
       title: 'Nimalar Yarataman',
       lead: 'Fokuslangan tizimlar, operatsion dasturlar va production-grade vositalar.',
+      service_web_title: 'Professional web design',
+      service_web_body:
+        'Brendga mos, ishonch uyg‘otadigan va premium taassurot beradigan zamonaviy veb interfeyslar. Kuchli tipografiya, aniq vizual ierarxiya va conversion’ga xizmat qiladigan UX qarorlari bilan ishlab chiqiladi.',
       footer_cta: 'Xabar yuborish →',
     },
     about: {
@@ -144,6 +147,9 @@ const translations = {
       badge: 'Services',
       title: 'What I Build',
       lead: 'Focused systems, operational software, and production-grade tools.',
+      service_web_title: 'Professional Web Design',
+      service_web_body:
+        'Modern web interfaces built to feel premium, trustworthy, and aligned with the brand. Designed with strong typography, clear visual hierarchy, and UX decisions that support real conversion.',
       footer_cta: 'Send a Message →',
     },
     about: {
@@ -229,6 +235,9 @@ const translations = {
       badge: 'Услуги',
       title: 'Что я создаю',
       lead: 'Сфокусированные системы, операционный софт и production-grade инструменты.',
+      service_web_title: 'Профессиональный веб-дизайн',
+      service_web_body:
+        'Современные веб-интерфейсы, которые выглядят премиально, внушают доверие и точно соответствуют бренду. Сильная типографика, ясная визуальная иерархия и UX-решения, работающие на реальную конверсию.',
       footer_cta: 'Отправить сообщение →',
     },
     about: {
